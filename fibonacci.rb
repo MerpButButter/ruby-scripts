@@ -14,6 +14,7 @@ end
 
 def fibs_rec(n, last_n = 0, current_n = 0, next_n = 1, list = [])
   return list if n.zero?
+
   current_n += last_n
   last_n = next_n
   next_n = current_n

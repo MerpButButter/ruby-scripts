@@ -22,7 +22,7 @@ def caesar_cipher(string, shift)
 end
 
 def wrap_array_position(array, position)
-  (position % array.count + array.count) % array.count
+  ((position % array.count) + array.count) % array.count
 end
 
 p caesar_cipher("What a string!", 5)

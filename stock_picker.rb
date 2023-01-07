@@ -2,7 +2,7 @@ def stock_picker(stock)
   overall_scores =
     stock.reduce([]) do |array, day|
       since_day = stock.slice_before(day).to_a.last
-      overall_score = since_day.reduce(0) { |total, number| total + (number - day) }
+      overall_score = since_day.reduce(0) { |acc, elem| acc + (elem - day) }
       array.push(overall_score)
     end
   best_buy = overall_scores.find_index(overall_scores.max)
