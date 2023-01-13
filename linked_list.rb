@@ -1,3 +1,4 @@
+# Node class which contains a value and can be connected to a next node
 class Node
   attr_accessor :value, :next_node
 
@@ -6,6 +7,7 @@ class Node
   end
 end
 
+# List of nodes with methods for the it
 class LinkedList 
   attr_accessor :head, :tail
 
